@@ -17,22 +17,25 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def train_model(data, signatures, iter, batch_size, epochs, loss,augmentation,activation,save_to):
-        
-    X_scaled=normalize(data)
-    
-    X_aug_multi_scaled=normalize(data_augmentation(X=np.array(data), augmentation=augmentation))
 
-    model,encoder = MUSE_XAE(input_dim=96,z=signatures,activation=activation)
-    model.compile(optimizer=tf.keras.optimizers.legacy.Adam(), loss=loss, metrics=['mse'])
-    early_stopping=EarlyStopping(monitor='val_mse',patience=30)
-    checkpoint=ModelCheckpoint(f'{save_to}best_model_{signatures}_{iter}.h5', monitor='val_mse', save_best_only=True, verbose=False)
-    model.fit(X_aug_multi_scaled,X_aug_multi_scaled, epochs=epochs, batch_size=batch_size, verbose=False,validation_data=(X_scaled,X_scaled),callbacks=[early_stopping,checkpoint])
-    model_new = load_model(f'{save_to}best_model_{signatures}_{iter}.h5',custom_objects={"minimum_volume":minimum_volume(beta=0.001,dim=int(signatures))})
+    checkpoint_path = f'{save_to}best_model_{signatures}_{iter}.h5'
+    X_scaled = normalize(data)
+
+    # Resume: if this fit's checkpoint already exists, skip retraining.
+    if not os.path.exists(checkpoint_path):
+        X_aug_multi_scaled=normalize(data_augmentation(X=np.array(data), augmentation=augmentation))
+        model,encoder = MUSE_XAE(input_dim=96,z=signatures,activation=activation)
+        model.compile(optimizer=tf.keras.optimizers.legacy.Adam(), loss=loss, metrics=['mse'])
+        early_stopping=EarlyStopping(monitor='val_mse',patience=30)
+        ckpt=ModelCheckpoint(checkpoint_path, monitor='val_mse', save_best_only=True, verbose=False)
+        model.fit(X_aug_multi_scaled,X_aug_multi_scaled, epochs=epochs, batch_size=batch_size, verbose=False,validation_data=(X_scaled,X_scaled),callbacks=[early_stopping,ckpt])
+
+    model_new = load_model(checkpoint_path,custom_objects={"minimum_volume":minimum_volume(beta=0.001,dim=int(signatures))})
     encoder_new = Model(inputs=model_new.input, outputs=model_new.get_layer('encoder_layer').output)
-    
+
     S = model_new.layers[-1].get_weights()[0]
     E = encoder_new.predict(X_scaled)
-    
+
     error = np.linalg.norm(np.array(X_scaled) - np.array(E.dot(S)))
 
     return error, S.T
