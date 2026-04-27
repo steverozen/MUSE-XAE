@@ -1,0 +1,30 @@
+Array task 9  dataset: Liver-HCC_hypermutator
+Node: dcc-core-ferc-u-ab25-3-1  CPUs: 96  Started: Mon Apr 27 11:03:18 AM EDT 2026
+ 
+--------------------------------------------------
+ 
+         De Novo Extraction with MUSE-XAE
+ 
+--------------------------------------------------
+
+Running 100 iterations with 2 mutational signatures ...
+
+Running 100 iterations with 3 mutational signatures ...
+
+Running 100 iterations with 4 mutational signatures ...
+
+Running 100 iterations with 5 mutational signatures ...
+
+Running 100 iterations with 6 mutational signatures ...
+
+Running 100 iterations with 7 mutational signatures ...
+
+Running 100 iterations with 8 mutational signatures ...
+
+Running 100 iterations with 9 mutational signatures ...
+
+Running 100 iterations with 10 mutational signatures ...
+ 
+Thank you for using MUSE-XAE! Check the results on the Experiments folder
+ 
+Finished: Mon Apr 27 11:07:55 AM EDT 2026

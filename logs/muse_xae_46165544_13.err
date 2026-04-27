@@ -1,0 +1,18 @@
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
+/cwork/sr110/MUSE-XAE/MUSE-XAE/data_visualization.py:222: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
+  cosmic_match=pd.DataFrame([cosine_similarity(reoreder_sig.iloc[:,i].ravel().reshape(1,-1),COSMIC.iloc[:,i].ravel().reshape(1,-1))[0] for i in range(COSMIC.shape[1])],columns=['similiarity'])
